@@ -13,6 +13,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        colorScheme: ColorScheme( 
+          brightness: Brightness.light, 
+          primary: Color(0xFF050507), 
+          secondary: Color(0xFFB5B6B6), 
+          onPrimary: Color(0xFFEB672B), 
+          onSecondary: Color(0xFF424153), 
+          background: Color(0xFFE4E5E6), 
+          onBackground: Color(0xFFF1A060), 
+          surface: Color(0xFFB5B6B6), 
+          onSurface: Color(0xFF6E46D6), 
+          error: Colors.red, 
+          onError: Colors.red, 
+          tertiary: Color(0xFFDBB3AD)),
         
         primarySwatch: Colors.blue,
       ),
