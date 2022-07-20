@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        fontFamily: '-OC Pajaro Medium',
+        fontFamily: 'OC Pajaro Medium',
         colorScheme: ColorScheme( 
           brightness: Brightness.light, 
           primary: Color(0xFF050507), 
@@ -34,35 +35,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-  
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-
-    return Scaffold(
-  
-      body: Column(
-
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          
-        ],
-      ),
-    );
-  }
-}

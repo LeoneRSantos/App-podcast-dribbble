@@ -74,9 +74,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: -OC Pajaro Medium
+    - family: OC Pajaro Medium
       fonts:
-        - asset: fonts/FontsFree-Net-OCPajaro-Medium.ttf
+        - asset: assets/fonts/OCPajaro-Medium.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
