@@ -5,12 +5,34 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
+    // ColorScheme cores = Theme.of(context).colorScheme;
+
+    // Color _corInicialTexto = cores.primary;
+    // double _tamanhoInicialTexto = 20.0;
+
+    //   void _categoriaSelecionada(){
+    //     if (_corInicialTexto == cores.secondary) {
+    //       setState(() {
+    //         _corInicialTexto = Colors.redAccent;
+    //         _tamanhoInicialTexto = 26.0;
+    //       });
+    //     }
+
+    //   debugPrint('Categoria Selecionada');
+    //   }
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -31,7 +53,7 @@ class MyApp extends StatelessWidget {
           tertiary: Color(0xFFDBB3AD)),
         
       ),
-      home: const MyHomePage(),
+      home: MyHomePage(),
     );
   }
 }
