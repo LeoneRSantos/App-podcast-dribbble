@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Textos extends StatelessWidget {
+class Textos extends StatefulWidget {
   const Textos({Key? key,  
   required this.conteudo, 
   required this.cor, 
@@ -11,8 +11,13 @@ class Textos extends StatelessWidget {
   final Color cor;
 
   @override
+  State<Textos> createState() => _TextosState();
+}
+
+class _TextosState extends State<Textos> {
+  @override
   Widget build(BuildContext context) {
-    return Text(conteudo, 
-    style: TextStyle(color: cor, fontSize: tamanho),);
+    return Text(widget.conteudo, 
+    style: TextStyle(color: widget.cor, fontSize: widget.tamanho),);
   }
 }
