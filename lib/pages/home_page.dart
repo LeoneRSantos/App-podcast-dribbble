@@ -12,14 +12,14 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   
-  double _tamanhoInicialTexto = 25.0;
+  double _tamanhoInicialTexto = 22.0;
   Color _corInicialTexto = Color(0xFFB5B6B6);
 
   void _categoriaSelecionada(){
     if (_corInicialTexto == Color(0xFFB5B6B6)) {
       setState(() {
         _corInicialTexto = Color(0xFF050507);
-        _tamanhoInicialTexto = 30.0;
+        _tamanhoInicialTexto = 26.0;
        
       });
       debugPrint('SetState');
@@ -28,7 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
     else if (_corInicialTexto == Color(0xFF050507)){
       setState(() {
         _corInicialTexto = Color(0xFFB5B6B6);
-        _tamanhoInicialTexto = 25.0;
+        _tamanhoInicialTexto = 22.0;
         
       });
     }
