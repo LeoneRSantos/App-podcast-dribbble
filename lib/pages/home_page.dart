@@ -11,30 +11,24 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
-  @override
-  Widget build(BuildContext context) {
-
-  ColorScheme cores = Theme.of(context).colorScheme;
-
-  Color _corInicialTexto = cores.secondary;
+  
   double _tamanhoInicialTexto = 25.0;
+  Color _corInicialTexto = Color(0xFFB5B6B6);
 
   void _categoriaSelecionada(){
-    if (_corInicialTexto == cores.secondary) {
+    if (_corInicialTexto == Color(0xFFB5B6B6)) {
       setState(() {
-        _corInicialTexto = Colors.indigo;
+        _corInicialTexto = Color(0xFF050507);
         _tamanhoInicialTexto = 30.0;
        
       });
       debugPrint('SetState');
     }
 
-    else if (_corInicialTexto == cores.primary){
+    else if (_corInicialTexto == Color(0xFF050507)){
       setState(() {
-        _corInicialTexto = Colors.redAccent;
-        _tamanhoInicialTexto = 50.0;
+        _corInicialTexto = Color(0xFFB5B6B6);
+        _tamanhoInicialTexto = 25.0;
         
       });
     }
@@ -43,24 +37,29 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
 
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: cores.background,
-      
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-    
-          children: [
-            Topo(), 
+  @override
+  Widget build(BuildContext context) {
 
-            CategoriasTopo(
-            corTexto: _corInicialTexto, 
-            selecionarCategoria: _categoriaSelecionada, 
-            tamanhoTexto: _tamanhoInicialTexto,),
-          
-          ],
-        ),
+  ColorScheme cores = Theme.of(context).colorScheme;
+
+  return SafeArea(
+    child: Scaffold(
+      backgroundColor: cores.background,
+    
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+  
+        children: [
+          Topo(), 
+
+          CategoriasTopo(
+          corTexto: _corInicialTexto, 
+          selecionarCategoria: _categoriaSelecionada,
+          tamanhoTexto: _tamanhoInicialTexto,),
+        
+        ],
       ),
-    );
+    ),
+  );
   }
 }
