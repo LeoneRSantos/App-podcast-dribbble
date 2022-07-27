@@ -63,7 +63,6 @@ class _MyHomePageState extends State<MyHomePage> {
           Topo(), 
 
           CategoriasTopo(
-          corTexto: _corInicialTexto, 
           selecionarCategoria: _categoriaSelecionada,
           corTexto1: _corInicialTexto1, 
           corTexto2: _corInicialTexto2,
