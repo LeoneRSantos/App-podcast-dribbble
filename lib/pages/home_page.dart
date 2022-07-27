@@ -13,8 +13,16 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   
-  double _tamanhoInicialTexto = 22.0;
-  Color _corInicialTexto = Color(0xFFB5B6B6);
+  // Tamanho inicial de cada texto de Categoria
+  double _tamanhoInicialTexto1 = 22.0;
+  double _tamanhoInicialTexto2 = 18.0;
+  double _tamanhoInicialTexto3 = 18.0;
+
+  // Cores dos textos de cada Categoria
+  Color _corInicialTexto1 = Color(0xFFB5B6B6);
+  Color _corInicialTexto2 = Color(0xFFB5B6B6);
+  Color _corInicialTexto3 = Color(0xFFB5B6B6);
+
   int selectedIndex = 0;
 
   void _categoriaSelecionada(){
