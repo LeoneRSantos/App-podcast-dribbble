@@ -26,19 +26,19 @@ class _MyHomePageState extends State<MyHomePage> {
   int selectedIndex = 0;
 
   void _categoriaSelecionada(){
-    if (_corInicialTexto == Color(0xFFB5B6B6)) {
+    if (_corInicialTexto1 == Color(0xFFB5B6B6)) {
       setState(() {
-        _corInicialTexto = Color(0xFF050507);
-        _tamanhoInicialTexto = 26.0;
+        _corInicialTexto1 = Color(0xFF050507);
+        _tamanhoInicialTexto1 = 26.0;
        
       });
       debugPrint('SetState');
     }
 
-    else if (_corInicialTexto == Color(0xFF050507)){
+    else if (_corInicialTexto1 == Color(0xFF050507)){
       setState(() {
-        _corInicialTexto = Color(0xFFB5B6B6);
-        _tamanhoInicialTexto = 22.0;
+        _corInicialTexto1 = Color(0xFFB5B6B6);
+        _tamanhoInicialTexto1 = 22.0;
         
       });
     }
