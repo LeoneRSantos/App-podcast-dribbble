@@ -65,7 +65,12 @@ class _MyHomePageState extends State<MyHomePage> {
           CategoriasTopo(
           corTexto: _corInicialTexto, 
           selecionarCategoria: _categoriaSelecionada,
-          tamanhoTexto: _tamanhoInicialTexto,),
+          corTexto1: _corInicialTexto1, 
+          corTexto2: _corInicialTexto2,
+          corTexto3: _corInicialTexto3,
+          tamanhoTexto1: _tamanhoInicialTexto1, 
+          tamanhoTexto2: _tamanhoInicialTexto2,
+          tamanhoTexto3: _tamanhoInicialTexto3,),
         
         ],
       ),
