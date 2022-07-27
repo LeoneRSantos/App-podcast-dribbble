@@ -36,13 +36,13 @@ class _CategoriasTopoState extends State<CategoriasTopo> {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
       children: [ 
-        GestureDetector(child: Textos(conteudo: 'Popular', cor: widget.corTexto,tamanho: widget.tamanhoTexto), 
+        GestureDetector(child: Textos(conteudo: 'Popular', cor: widget.corTexto1,tamanho: widget.tamanhoTexto1), 
         onTap: widget.selecionarCategoria,), 
 
-        GestureDetector(child: Textos(conteudo: 'Destaque', cor: widget.corTexto, tamanho: widget.tamanhoTexto),
+        GestureDetector(child: Textos(conteudo: 'Destaque', cor: widget.corTexto2, tamanho: widget.tamanhoTexto2),
         onTap: (){},),
 
-        GestureDetector(child: Textos(conteudo: 'Tendências', cor: widget.corTexto, tamanho: widget.tamanhoTexto),
+        GestureDetector(child: Textos(conteudo: 'Tendências', cor: widget.corTexto3, tamanho: widget.tamanhoTexto3),
         onTap: (){},),
       ],
     );
