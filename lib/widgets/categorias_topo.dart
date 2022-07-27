@@ -4,12 +4,25 @@ import 'package:podcast_app_dribbble/widgets/textos.dart';
 class CategoriasTopo extends StatefulWidget {
   CategoriasTopo({Key? key, 
   required this.selecionarCategoria, 
-  required this.corTexto, 
-  required this.tamanhoTexto}) : super(key: key);
+  required this.corTexto1, 
+  required this.corTexto2, 
+  required this.corTexto3,
+  required this.tamanhoTexto1, 
+  required this.tamanhoTexto2, 
+  required this.tamanhoTexto3}) : super(key: key);
 
+  // Função
   final void Function() selecionarCategoria;
-  final Color corTexto;
-  final double tamanhoTexto;
+
+  // Cores
+  final Color corTexto1;
+  final Color corTexto2;
+  final Color corTexto3;
+
+  // Tamanhos
+  final double tamanhoTexto1;
+  final double tamanhoTexto2;
+  final double tamanhoTexto3;
 
   @override
   State<CategoriasTopo> createState() => _CategoriasTopoState();
