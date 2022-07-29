@@ -23,9 +23,9 @@ class _MyHomePageState extends State<MyHomePage> {
   late double _tamanhoInicialTexto3 = categoria.tamanhoTextoInativo;
 
   // Cores dos textos de cada Categoria
-  Color _corInicialTexto1 = Color(0xFFB5B6B6);
-  Color _corInicialTexto2 = Color(0xFFB5B6B6);
-  Color _corInicialTexto3 = Color(0xFFB5B6B6);
+  Color _corInicialTexto1 = CategoriaTopo.corAtiva;
+  Color _corInicialTexto2 = CategoriaTopo.corInativa;
+  Color _corInicialTexto3 = CategoriaTopo.corInativa;
 
   int selectedIndex = 0;
 
