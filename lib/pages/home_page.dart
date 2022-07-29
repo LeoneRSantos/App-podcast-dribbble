@@ -29,25 +29,51 @@ class _MyHomePageState extends State<MyHomePage> {
 
   int selectedIndex = 0;
 
-  void _categoriaSelecionada(){
-    if (_corInicialTexto1 == Color(0xFFB5B6B6)) {
+  // Auxiliar para selecionar a categoria do topo
+  int aux = 0;
+
+  void _categoriaSelecionada(int indice){
+    if (indice == 0) {
       setState(() {
-        _corInicialTexto1 = Color(0xFF050507);
-        _tamanhoInicialTexto1 = 26.0;
+        _corInicialTexto1 = CategoriaTopo.corAtiva;
+        _corInicialTexto2 = CategoriaTopo.corInativa;
+        _corInicialTexto3 = CategoriaTopo.corInativa;
+
+        _tamanhoInicialTexto1 = categoria.tamanhoTextoAtivo;
+        _tamanhoInicialTexto2 = categoria.tamanhoTextoInativo;
+        _tamanhoInicialTexto3 = categoria.tamanhoTextoInativo;
        
       });
-      debugPrint('SetState');
+      debugPrint('Popular');
     }
 
-    else if (_corInicialTexto1 == Color(0xFF050507)){
+    else if (indice == 1){
       setState(() {
-        _corInicialTexto1 = Color(0xFFB5B6B6);
-        _tamanhoInicialTexto1 = 22.0;
+        _corInicialTexto2 = CategoriaTopo.corAtiva;
+        _corInicialTexto1 = CategoriaTopo.corInativa;
+        _corInicialTexto3 = CategoriaTopo.corInativa;
+        
+        _tamanhoInicialTexto2 = categoria.tamanhoTextoAtivo;
+        _tamanhoInicialTexto1 = categoria.tamanhoTextoInativo;
+        _tamanhoInicialTexto3 = categoria.tamanhoTextoInativo;
+        
+      });
+      debugPrint('Destaque');
+    }
+
+    else if(indice == 2){
+      setState(() {
+        _corInicialTexto3 = CategoriaTopo.corAtiva;
+        _corInicialTexto2 = CategoriaTopo.corInativa;
+        _corInicialTexto1 = CategoriaTopo.corInativa;
+
+        _tamanhoInicialTexto3 = categoria.tamanhoTextoAtivo;
+        _tamanhoInicialTexto1 = categoria.tamanhoTextoInativo;
+        _tamanhoInicialTexto2 = categoria.tamanhoTextoInativo;
+        debugPrint('Tendências');
         
       });
     }
-
-    debugPrint('Categoria Selecionada');
   }
 
 
