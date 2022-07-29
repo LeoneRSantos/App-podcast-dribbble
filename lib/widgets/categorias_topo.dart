@@ -12,8 +12,10 @@ class CategoriasTopo extends StatefulWidget {
   required this.tamanhoTexto2, 
   required this.tamanhoTexto3}) : super(key: key);
 
-  // Função
-  final void Function() selecionarCategoria;
+  // Funções
+  final void Function() selecionarCategoriaUm;
+  final void Function() selecionarCategoriaDois;
+  final void Function() selecionarCategoriaTres;
 
   // Cores
   final Color corTexto1;
