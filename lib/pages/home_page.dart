@@ -13,6 +13,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  // Objeto de CategoriaTopo
+  CategoriaTopo categoria = CategoriaTopo();
   
   // Tamanho inicial de cada texto de Categoria
   double _tamanhoInicialTexto1 = 22.0;
