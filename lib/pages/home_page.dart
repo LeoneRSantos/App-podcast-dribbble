@@ -18,9 +18,9 @@ class _MyHomePageState extends State<MyHomePage> {
   CategoriaTopo categoria = CategoriaTopo();
   
   // Tamanho inicial de cada texto de Categoria
-  double _tamanhoInicialTexto1 = 22.0;
-  double _tamanhoInicialTexto2 = 18.0;
-  double _tamanhoInicialTexto3 = 18.0;
+  late double _tamanhoInicialTexto1 = categoria.tamanhoTextoAtivo;
+  late double _tamanhoInicialTexto2 = categoria.tamanhoTextoInativo;
+  late double _tamanhoInicialTexto3 = categoria.tamanhoTextoInativo;
 
   // Cores dos textos de cada Categoria
   Color _corInicialTexto1 = Color(0xFFB5B6B6);
