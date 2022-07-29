@@ -4,7 +4,9 @@ import 'package:podcast_app_dribbble/widgets/textos.dart';
 
 class CategoriasTopo extends StatefulWidget {
   CategoriasTopo({Key? key, 
-  required this.selecionarCategoria, 
+  required this.selecionarCategoriaUm, 
+  required this.selecionarCategoriaDois, 
+  required this.selecionarCategoriaTres, 
   required this.corTexto1, 
   required this.corTexto2, 
   required this.corTexto3,
