@@ -52,25 +52,13 @@ class _CategoriasTopoState extends State<CategoriasTopo> {
 
       children: [ 
         GestureDetector(child: Textos(conteudo: 'Popular', cor: widget.corTexto1,tamanho: widget.tamanhoTexto1), 
-        onTap: (){
-          widget.retornarIndice(0);
-
-          widget.selecionarCategoria;
-        },), 
+        onTap: widget.selecionarCategoriaUm,), 
 
         GestureDetector(child: Textos(conteudo: 'Destaque', cor: widget.corTexto2, tamanho: widget.tamanhoTexto2),
-        onTap: (){
-          widget.retornarIndice(1);
-
-          widget.selecionarCategoria;
-        },),
+        onTap: widget.selecionarCategoriaDois,),
 
         GestureDetector(child: Textos(conteudo: 'Tendências', cor: widget.corTexto3, tamanho: widget.tamanhoTexto3,),
-        onTap: (){
-          widget.retornarIndice(2);
-
-          widget.selecionarCategoria;
-        },),
+        onTap: widget.selecionarCategoriaTres,),
       ],
     );
   }
