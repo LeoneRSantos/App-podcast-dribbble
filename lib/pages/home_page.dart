@@ -27,6 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Color _corInicialTexto2 = CategoriaTopo.corInativa;
   Color _corInicialTexto3 = CategoriaTopo.corInativa;
 
+  // Índice usado na BottomNavigation
   int selectedIndex = 0;
 
   // Auxiliar para selecionar a categoria do topo
@@ -93,7 +94,6 @@ class _MyHomePageState extends State<MyHomePage> {
           Topo(), 
 
           CategoriasTopo(
-          selecionarCategoria: _categoriaSelecionada,
           corTexto1: _corInicialTexto1, 
           corTexto2: _corInicialTexto2,
           corTexto3: _corInicialTexto3,
