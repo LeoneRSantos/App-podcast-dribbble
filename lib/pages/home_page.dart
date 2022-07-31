@@ -87,12 +87,18 @@ class _MyHomePageState extends State<MyHomePage> {
   return SafeArea(
     child: Scaffold(
       backgroundColor: cores.background,
+
+      appBar: AppBar( 
+        title: Topo(),
+        backgroundColor: Theme.of(context).colorScheme.background,
+        elevation: 0.0,
+      ),
     
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
   
         children: [
-          Topo(), 
+          // Topo(), 
 
           CategoriasTopo(
           corTexto1: _corInicialTexto1, 
