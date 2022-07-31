@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:podcast_app_dribbble/categoria_topo.dart';
 import 'package:podcast_app_dribbble/widgets/carrossel_de_podcasts.dart';
 import 'package:podcast_app_dribbble/widgets/categorias_topo.dart';
+import 'package:podcast_app_dribbble/widgets/reproduzidos_recentemente.dart';
 import 'package:podcast_app_dribbble/widgets/textos.dart';
 import 'package:podcast_app_dribbble/widgets/topo.dart';
 import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
