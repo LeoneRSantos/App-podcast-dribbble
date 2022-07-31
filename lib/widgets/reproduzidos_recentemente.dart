@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:podcast_app_dribbble/widgets/textos.dart';
 
 class ReproduzidosRecentemente extends StatelessWidget {
   ReproduzidosRecentemente({Key? key}) : super(key: key);
