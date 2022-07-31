@@ -130,14 +130,15 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       bottomNavigationBar: SlidingClippedNavBar(
-        backgroundColor: Colors.white,
+        backgroundColor: cores.background,
         onButtonPressed: (index) {
           setState(() {
             selectedIndex = index;
           });
         },
         iconSize: 30,
-        activeColor: Color(0xFF01579B),
+        activeColor: cores.primary,
+        inactiveColor: cores.secondary,
         selectedIndex: selectedIndex,
         barItems: [
           BarItem(
@@ -149,7 +150,7 @@ class _MyHomePageState extends State<MyHomePage> {
             title: 'Explorar',
           ),
           BarItem(
-            icon: Icons.bookmark_outlined,
+            icon: Icons.bookmark_border_outlined,
             title: 'Salvos',
           ),
           BarItem(
