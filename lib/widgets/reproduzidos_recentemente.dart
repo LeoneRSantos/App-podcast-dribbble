@@ -63,8 +63,10 @@ class ComponentePlayer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row( 
-      children: [ 
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row( 
+        children: [ 
         CircleAvatar( 
           radius: 20.0,
           child: Image.asset(imagem),
