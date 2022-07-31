@@ -13,25 +13,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
-
-    // ColorScheme cores = Theme.of(context).colorScheme;
-
-    // Color _corInicialTexto = cores.primary;
-    // double _tamanhoInicialTexto = 20.0;
-
-    //   void _categoriaSelecionada(){
-    //     if (_corInicialTexto == cores.secondary) {
-    //       setState(() {
-    //         _corInicialTexto = Colors.redAccent;
-    //         _tamanhoInicialTexto = 26.0;
-    //       });
-    //     }
-
-    //   debugPrint('Categoria Selecionada');
-    //   }
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
