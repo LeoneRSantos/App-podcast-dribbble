@@ -35,8 +35,8 @@ class Topo extends StatelessWidget {
             decoration: BoxDecoration( 
               borderRadius: BorderRadius.circular(50.0),
               border: Border.all( 
-                width: 2.0, 
-                color: cores.primary,
+                width: 1.0, 
+                color: cores.secondary,
               )
             ), 
 

@@ -102,7 +102,7 @@ class ComponentePlayer extends StatelessWidget {
                 borderRadius: BorderRadius.circular(50.0),
                 border: Border.all( 
                   width: 1.0, 
-                  color: Theme.of(context).colorScheme.primary,
+                  color: Theme.of(context).colorScheme.secondary,
                 )
               ),
             child: IconButton(onPressed: (){}, 
