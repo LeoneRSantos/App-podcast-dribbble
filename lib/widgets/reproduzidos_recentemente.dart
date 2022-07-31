@@ -67,10 +67,10 @@ class ComponentePlayer extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Row( 
         children: [ 
-        CircleAvatar( 
-          radius: 20.0,
-          child: Image.asset(imagem),
-        ),
+          CircleAvatar( 
+            radius: 25.0,
+            backgroundImage: AssetImage(imagem),
+          ),
 
         Expanded(
           child: ListTile( 
