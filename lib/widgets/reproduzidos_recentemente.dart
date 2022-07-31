@@ -72,13 +72,17 @@ class ComponentePlayer extends StatelessWidget {
             backgroundImage: AssetImage(imagem),
           ),
 
-        Expanded(
-          child: ListTile( 
-            style:ListTileStyle.list,
-            title: Text(titulo),
-            subtitle: Text(nome),
+          Expanded(
+            child: ListTile( 
+              style:ListTileStyle.list,
+              title: Textos(conteudo: titulo, 
+              cor: Theme.of(context).colorScheme.primary, 
+              tamanho: 16.0),
+              subtitle: Textos(conteudo: nome, 
+              cor: Theme.of(context).colorScheme.secondary, 
+              tamanho: 14.0),
+            ),
           ),
-        ),
 
         Spacer(), 
 
