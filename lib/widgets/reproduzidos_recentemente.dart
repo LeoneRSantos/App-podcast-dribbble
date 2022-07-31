@@ -82,7 +82,7 @@ class ComponentePlayer extends StatelessWidget {
               cor: Theme.of(context).colorScheme.secondary, 
               tamanho: 14.0),
             ),
-          ),
+          ), 
 
         Spacer(), 
 
