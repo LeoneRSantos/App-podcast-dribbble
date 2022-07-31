@@ -40,7 +40,9 @@ class Topo extends StatelessWidget {
               )
             ), 
 
-            child: Icon(Icons.notifications_outlined, size: 32.0,),
+            child: Icon(Icons.notifications_outlined, 
+            size: 32.0, 
+            color: cores.primary,),
           )
         ],
       ),
