@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:podcast_app_dribbble/categoria_topo.dart';
+import 'package:podcast_app_dribbble/widgets/carrossel_de_podcasts.dart';
 import 'package:podcast_app_dribbble/widgets/categorias_topo.dart';
 import 'package:podcast_app_dribbble/widgets/textos.dart';
 import 'package:podcast_app_dribbble/widgets/topo.dart';
@@ -113,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
             _categoriaSelecionada(aux);
           },),
 
-           
+          CarroselDePodcasts(),         
         
         ],
       ),
