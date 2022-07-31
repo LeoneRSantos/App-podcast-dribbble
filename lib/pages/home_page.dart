@@ -97,8 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
   
-        children: [
-          // Topo(), 
+        children: [ 
 
           CategoriasTopo(
           corTexto1: _corInicialTexto1, 
