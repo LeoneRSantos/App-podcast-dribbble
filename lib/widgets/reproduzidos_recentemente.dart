@@ -37,17 +37,30 @@ class ReproduzidosRecentemente extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: imagensPodcasts.length,
-      itemBuilder: (BuildContext context, int index) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
         
-        return ComponentePlayer(
-          imagem: imagensPodcasts[index], 
-          titulo: titulosPodcasts[index], 
-          nome: nomesPodcasts[index],);
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Textos(conteudo: 'Reproduzidos recentemente', 
+          cor: Theme.of(context).colorScheme.primary, 
+          tamanho: 20.0),
+        ),
 
-      });
+        ListView.builder(
+          shrinkWrap: true,
+          itemCount: imagensPodcasts.length,
+          itemBuilder: (BuildContext context, int index) {
+            
+            return ComponentePlayer(
+              imagem: imagensPodcasts[index], 
+              titulo: titulosPodcasts[index], 
+              nome: nomesPodcasts[index],);
+
+          }),
+      ],
+    );
   }
 }
 
@@ -82,23 +95,24 @@ class ComponentePlayer extends StatelessWidget {
               cor: Theme.of(context).colorScheme.secondary, 
               tamanho: 14.0),
             ),
-          ), 
+          ),
 
-        Spacer(), 
+          // Spacer(), 
 
-        Container(
-          decoration: BoxDecoration( 
-              borderRadius: BorderRadius.circular(50.0),
-              border: Border.all( 
-                width: 1.0, 
-                color: Theme.of(context).colorScheme.primary,
-              )
-            ),
-          child: IconButton(onPressed: (){}, 
-          icon: Icon(Icons.play_arrow, 
-          color: Theme.of(context).colorScheme.onBackground,)),
-        ),
-      ],
+          Container(
+            decoration: BoxDecoration( 
+                borderRadius: BorderRadius.circular(50.0),
+                border: Border.all( 
+                  width: 1.0, 
+                  color: Theme.of(context).colorScheme.primary,
+                )
+              ),
+            child: IconButton(onPressed: (){}, 
+            icon: Icon(Icons.play_arrow, 
+            color: Theme.of(context).colorScheme.onBackground,)),
+          ),
+        ],
+      ),
     );
   }
 }
