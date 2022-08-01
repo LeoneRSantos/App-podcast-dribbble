@@ -62,6 +62,7 @@ class _PlayerState extends State<Player> {
         backgroundColor: cores.background,
 
         appBar: AppBar( 
+          automaticallyImplyLeading: false,
           elevation: 0.0,
           backgroundColor: cores.background,
           title: Row(
