@@ -7,7 +7,12 @@ import 'package:podcast_app_dribbble/widgets/textos.dart';
 import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
 
 class Player extends StatefulWidget {
-  Player({Key? key}) : super(key: key);
+  Player({Key? key, 
+  required this.imagemPlayer, 
+  required this.tituloPlayer}) : super(key: key);
+
+  final String imagemPlayer;
+  final String tituloPlayer;
 
   @override
   State<Player> createState() => _PlayerState();
