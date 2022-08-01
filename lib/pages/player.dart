@@ -157,7 +157,13 @@ class _PlayerState extends State<Player> {
             ),
           ],
         ),  
-         
+        
+
+        bottomNavigationBar: BottomBarSegundaTela( 
+          iconeSalvar: iconeSalvarInativo,  
+          iconePlay: iconePlayInativo, 
+          play: pressionarPlay, 
+          salvar: salvarPodcast,),
        
       ), 
       );
