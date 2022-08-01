@@ -1,5 +1,5 @@
 import 'dart:ui';
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:podcast_app_dribbble/widgets/app_bar_segunda_tela.dart';
 import 'package:podcast_app_dribbble/widgets/bottom_bar_segunda_tela.dart';
