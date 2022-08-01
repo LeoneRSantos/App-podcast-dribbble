@@ -14,6 +14,44 @@ class Player extends StatefulWidget {
 }
 
 class _PlayerState extends State<Player> {
+
+  IconData iconeSalvarInativo = Icons.bookmark_border_rounded;
+  IconData iconePlayInativo = Icons.play_arrow;
+
+  double _value = 1.7;
+  double _valorRestante = 5.0;
+
+  void pressionarPlay(){
+    if (iconePlayInativo == Icons.play_arrow) {
+      setState(() {
+        iconePlayInativo = Icons.pause;
+        
+      });
+    }
+
+    else{
+      setState(() {
+        iconePlayInativo = Icons.play_arrow;
+        
+      });
+    }
+  }
+
+  void salvarPodcast(){ 
+    if (iconeSalvarInativo == Icons.bookmark_border_rounded) {
+      setState(() {
+        iconeSalvarInativo = Icons.bookmark;
+      });
+    }
+
+    else{ 
+      setState(() {
+        iconeSalvarInativo = Icons.bookmark_border_rounded;
+        
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
 
