@@ -116,14 +116,14 @@ class _PlayerState extends State<Player> {
           children: [ 
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Center(child: Image.asset('assets/images/flow.jpg'),),
+              child: Center(child: Image.asset(widget.imagemPlayer),),
             ),
 
-            Text('FALCÃO 12 - Flow #74 🤝 @Flow Sport Club',
+            Text(widget.tituloPlayer,
             textAlign: TextAlign.center, 
             style: TextStyle( 
               color: cores.primary, 
-              fontSize: 30.0,
+              fontSize: 25.0,
             ),
             ), 
 
