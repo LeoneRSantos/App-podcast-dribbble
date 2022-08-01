@@ -119,7 +119,42 @@ class _PlayerState extends State<Player> {
             style: TextStyle( 
               color: cores.primary, 
               fontSize: 30.0,
-            ),)
+            ),
+            ), 
+
+            // Slider de progresso do audio
+            Container(
+              width: double.maxFinite,
+              child: CupertinoSlider(
+                activeColor: Theme.of(context).colorScheme.onBackground,
+                min: 0.0,
+                max: 5.0,
+                value: _value,
+                onChanged: (value) {
+                  setState(() {
+                    _value = value;
+                    
+                  });
+                  
+                },
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 10.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround, 
+                
+                children: [ 
+                  Text('${_value.toStringAsFixed(2)}'),
+
+                  Spacer(),
+
+                  Text('${(_valorRestante-_value).toStringAsFixed(2)}'),
+                ],
+              ),
+            ),
           ],
         ),  
          
