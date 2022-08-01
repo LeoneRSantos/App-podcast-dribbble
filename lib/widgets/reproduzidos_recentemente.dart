@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:podcast_app_dribbble/pages/player.dart';
 import 'package:podcast_app_dribbble/widgets/textos.dart';
 
 class ReproduzidosRecentemente extends StatelessWidget {
@@ -87,38 +88,41 @@ class ComponentePlayer extends StatelessWidget {
           Player(imagemPlayer: imagem, tituloPlayer: titulo,)),);
         },
 
-      child: Row( 
-        children: [ 
-          CircleAvatar( 
-            radius: 25.0,
-            backgroundImage: AssetImage(imagem),
-          ),
-
-          Expanded(
-            child: ListTile( 
-              style:ListTileStyle.list,
-              title: Textos(conteudo: titulo, 
-              cor: Theme.of(context).colorScheme.primary, 
-              tamanho: 16.0),
-              subtitle: Textos(conteudo: nome, 
-              cor: Theme.of(context).colorScheme.secondary, 
-              tamanho: 14.0),
+        child: Row( 
+          children: [ 
+            CircleAvatar( 
+              radius: 25.0,
+              backgroundImage: AssetImage(imagem),
             ),
-          ), 
-
-          Container(
-            decoration: BoxDecoration( 
-                borderRadius: BorderRadius.circular(50.0),
-                border: Border.all( 
-                  width: 1.0, 
-                  color: Theme.of(context).colorScheme.secondary,
-                )
+      
+            Expanded(
+              child: ListTile( 
+                style:ListTileStyle.list,
+                title: Textos(conteudo: titulo, 
+                cor: Theme.of(context).colorScheme.primary, 
+                tamanho: 16.0),
+                subtitle: Textos(conteudo: nome, 
+                cor: Theme.of(context).colorScheme.secondary, 
+                tamanho: 14.0),
               ),
-            child: IconButton(onPressed: (){}, 
-            icon: Icon(Icons.play_arrow, 
-            color: Theme.of(context).colorScheme.onBackground,)),
-          ),
-        ],
+            ), 
+      
+            Container(
+              decoration: BoxDecoration( 
+                  borderRadius: BorderRadius.circular(50.0),
+                  border: Border.all( 
+                    width: 1.0, 
+                    color: Theme.of(context).colorScheme.secondary,
+                  )
+                ),
+              child: IconButton(onPressed: (){ 
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Player(imagemPlayer: imagem, tituloPlayer: titulo,)),);
+              }, 
+              icon: Icon(Icons.play_arrow, 
+              color: Theme.of(context).colorScheme.onBackground,)),
+            ),
+          ],
+        ),
       ),
     );
   }
