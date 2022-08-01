@@ -78,6 +78,15 @@ class ComponentePlayer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
+
+
+      child: GestureDetector(
+        // Função que redireciona para a segunda tela
+        onTap: (){ 
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => 
+          Player(imagemPlayer: imagem, tituloPlayer: titulo,)),);
+        },
+
       child: Row( 
         children: [ 
           CircleAvatar( 
