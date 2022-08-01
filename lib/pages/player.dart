@@ -106,6 +106,8 @@ class _PlayerState extends State<Player> {
         ),
 
         body: Column( 
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
           children: [ 
             Padding(
               padding: const EdgeInsets.all(10.0),
