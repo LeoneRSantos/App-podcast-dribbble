@@ -77,7 +77,11 @@ class _PlayerState extends State<Player> {
                 ),
 
                 child: IconButton(
-                  onPressed: (){}, 
+
+                  // Navegação de volta à Home
+                  onPressed: (){
+                    Navigator.of(context).pop();
+                  }, 
                   icon: Icon(Icons.arrow_back_ios_new, 
                   color: Theme.of(context).colorScheme.primary, 
                   size: 20.0,),
