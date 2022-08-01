@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:podcast_app_dribbble/widgets/app_bar_segunda_tela.dart';
+import 'package:podcast_app_dribbble/widgets/bottom_bar_segunda_tela.dart';
 import 'package:podcast_app_dribbble/widgets/textos.dart';
 import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
 
