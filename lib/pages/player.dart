@@ -9,7 +9,10 @@ import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
 class Player extends StatefulWidget {
   Player({Key? key, 
   required this.imagemPlayer, 
-  required this.tituloPlayer}) : super(key: key);
+  required this.tituloPlayer, 
+  required this.listaDeImagens, 
+  required this.listaDeTitulos, 
+  required this.indiceDoComponente}) : super(key: key);
 
   final String imagemPlayer;
   final String tituloPlayer;
