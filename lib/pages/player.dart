@@ -14,8 +14,13 @@ class Player extends StatefulWidget {
   required this.listaDeTitulos, 
   required this.indiceDoComponente}) : super(key: key);
 
-  final String imagemPlayer;
-  final String tituloPlayer;
+  late String imagemPlayer;
+  late String tituloPlayer;
+
+  final List<String> listaDeImagens;
+  final List<String> listaDeTitulos;
+
+  final int indiceDoComponente;
 
   @override
   State<Player> createState() => _PlayerState();
