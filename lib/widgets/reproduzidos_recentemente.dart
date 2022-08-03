@@ -57,7 +57,10 @@ class ReproduzidosRecentemente extends StatelessWidget {
             return ComponentePlayer(
               imagem: imagensPodcasts[index], 
               titulo: titulosPodcasts[index], 
-              nome: nomesPodcasts[index],);
+              nome: nomesPodcasts[index], 
+              logoDosPodcasts: imagensPodcasts, 
+              tituloDosPodcasts: titulosPodcasts, 
+              indice: index,);
 
           }),
       ],
