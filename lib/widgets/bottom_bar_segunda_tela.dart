@@ -46,7 +46,9 @@ class _BottomBarSegundaTelaState extends State<BottomBarSegundaTela> {
               icon: Icon(widget.iconePlay)),
           ),
 
-          ComponenteIcone(icone: Icons.skip_next), 
+          GestureDetector( 
+            onTap: widget.avancarPlayer,
+            child: ComponenteIcone(icone: Icons.skip_next)), 
 
           ComponenteIcone(icone: Icons.arrow_downward_rounded),
         ],
