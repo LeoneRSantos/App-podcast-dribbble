@@ -12,6 +12,7 @@ class BottomBarSegundaTela extends StatefulWidget {
   final IconData iconePlay;
   final void Function() play;
   final void Function() salvar;
+  final void Function() avancarPlayer;
 
   @override
   State<BottomBarSegundaTela> createState() => _BottomBarSegundaTelaState();
