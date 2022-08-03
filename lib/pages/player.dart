@@ -233,7 +233,8 @@ class _PlayerState extends State<Player> {
           iconeSalvar: iconeSalvarInativo,  
           iconePlay: iconePlayInativo, 
           play: pressionarPlay, 
-          salvar: salvarPodcast,),
+          salvar: salvarPodcast, 
+          avancarPlayer: avancarPodcast,),
        
       ), 
       );
