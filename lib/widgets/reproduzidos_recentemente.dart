@@ -91,7 +91,12 @@ class ComponentePlayer extends StatelessWidget {
         // Função que redireciona para a segunda tela
         onTap: (){ 
           Navigator.of(context).push(MaterialPageRoute(builder: (context) => 
-          Player(imagemPlayer: imagem, tituloPlayer: titulo,)),);
+          Player( 
+            imagemPlayer: imagem,  
+            tituloPlayer: titulo, 
+            listaDeImagens: logoDosPodcasts, 
+            listaDeTitulos: tituloDosPodcasts, 
+            indiceDoComponente: indice,)),);
         },
 
         child: Row( 
