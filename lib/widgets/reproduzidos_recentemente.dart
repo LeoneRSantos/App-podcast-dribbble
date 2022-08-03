@@ -122,7 +122,11 @@ class ComponentePlayer extends StatelessWidget {
                   )
                 ),
               child: IconButton(onPressed: (){ 
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Player(imagemPlayer: imagem, tituloPlayer: titulo,)),);
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Player(
+                    imagemPlayer: imagem, 
+                    tituloPlayer: titulo, 
+                    listaDeImagens: logoDosPodcasts, 
+                    listaDeTitulos: tituloDosPodcasts, indiceDoComponente: indice,)),);
               }, 
               icon: Icon(Icons.play_arrow, 
               color: Theme.of(context).colorScheme.onBackground,)),
