@@ -74,6 +74,9 @@ class ComponentePlayer extends StatelessWidget {
   final String imagem;
   final String titulo;
   final String nome;
+  final List<String> logoDosPodcasts;
+  final List<String> tituloDosPodcasts;
+  final int indice;
 
   @override
   Widget build(BuildContext context) {
