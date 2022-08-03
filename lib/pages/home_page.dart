@@ -96,36 +96,39 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     
       body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-        
-          children: [ 
-      
-            CategoriasTopo(
-            corTexto1: _corInicialTexto1, 
-            corTexto2: _corInicialTexto2,
-            corTexto3: _corInicialTexto3,
-            tamanhoTexto1: _tamanhoInicialTexto1, 
-            tamanhoTexto2: _tamanhoInicialTexto2,
-            tamanhoTexto3: _tamanhoInicialTexto3, 
-            selecionarCategoriaUm: (){ 
-              aux = categoria.verificarIndiceCategoria('Popular');
-              _categoriaSelecionada(aux);
-            },
-            selecionarCategoriaDois: () { 
-              aux = categoria.verificarIndiceCategoria('Destaque');
-              _categoriaSelecionada(aux);
-            }, 
-            selecionarCategoriaTres: () { 
-              aux = categoria.verificarIndiceCategoria('Tendências');
-              _categoriaSelecionada(aux);
-            },),
-      
-            CarroselDePodcasts(), 
-      
-            ReproduzidosRecentemente(),        
+        child: Padding(
+          padding: const EdgeInsets.only(top: 10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           
-          ],
+            children: [ 
+      
+              CategoriasTopo(
+              corTexto1: _corInicialTexto1, 
+              corTexto2: _corInicialTexto2,
+              corTexto3: _corInicialTexto3,
+              tamanhoTexto1: _tamanhoInicialTexto1, 
+              tamanhoTexto2: _tamanhoInicialTexto2,
+              tamanhoTexto3: _tamanhoInicialTexto3, 
+              selecionarCategoriaUm: (){ 
+                aux = categoria.verificarIndiceCategoria('Popular');
+                _categoriaSelecionada(aux);
+              },
+              selecionarCategoriaDois: () { 
+                aux = categoria.verificarIndiceCategoria('Destaque');
+                _categoriaSelecionada(aux);
+              }, 
+              selecionarCategoriaTres: () { 
+                aux = categoria.verificarIndiceCategoria('Tendências');
+                _categoriaSelecionada(aux);
+              },),
+      
+              CarroselDePodcasts(), 
+      
+              ReproduzidosRecentemente(),        
+            
+            ],
+          ),
         ),
       ),
 
