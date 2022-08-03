@@ -50,6 +50,7 @@ class ReproduzidosRecentemente extends StatelessWidget {
         ),
 
         ListView.builder(
+          physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           itemCount: imagensPodcasts.length,
           itemBuilder: (BuildContext context, int index) {
