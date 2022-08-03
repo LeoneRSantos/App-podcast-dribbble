@@ -73,6 +73,50 @@ class _PlayerState extends State<Player> {
     }
   }
 
+  void incrementarAuxiliarPlayer(){ 
+    if (auxiliarPlayer < 5) {
+      auxiliarPlayer++;
+    }
+
+    else if(auxiliarPlayer == 5){ 
+      auxiliarPlayer = 0;
+    }
+
+    else{ 
+      auxiliarPlayer = widget.indiceDoComponente;
+    }
+    debugPrint('Incremento: $auxiliarPlayer\n\n');
+  }
+
+  void avancarPodcast(){ 
+    if (widget.indiceDoComponente <= 5) {
+      setState(() {
+        
+        widget.imagemPlayer = widget.listaDeImagens[auxiliarPlayer];
+
+        widget.tituloPlayer = widget.listaDeTitulos[auxiliarPlayer];
+
+        debugPrint('ìndice: ${widget.indiceDoComponente}\n Auxiliar: $auxiliarPlayer');
+        
+        incrementarAuxiliarPlayer();
+      });
+    }
+
+    else if(widget.indiceDoComponente > 5){ 
+      setState(() {
+
+        widget.tituloPlayer = widget.listaDeTitulos[auxiliarPlayer];
+
+        debugPrint('ìndice: ${widget.indiceDoComponente}\n Auxiliar: $auxiliarPlayer');
+        
+        incrementarAuxiliarPlayer();
+        
+      });
+
+
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
 
