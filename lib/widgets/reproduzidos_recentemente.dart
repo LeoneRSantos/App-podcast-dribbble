@@ -69,7 +69,10 @@ class ComponentePlayer extends StatelessWidget {
   ComponentePlayer({Key? key, 
   required this.imagem, 
   required this.titulo, 
-  required this.nome}) : super(key: key);
+  required this.nome, 
+  required this.logoDosPodcasts, 
+  required this.tituloDosPodcasts, 
+  required this.indice}) : super(key: key);
 
   final String imagem;
   final String titulo;
