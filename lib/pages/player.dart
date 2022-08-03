@@ -28,11 +28,19 @@ class Player extends StatefulWidget {
 
 class _PlayerState extends State<Player> {
 
+  // Ícones de salvar e de play
   IconData iconeSalvarInativo = Icons.bookmark_border_rounded;
   IconData iconePlayInativo = Icons.play_arrow;
 
+  // indicadores de progresso do slider
   double _value = 1.7;
   double _valorRestante = 5.0;
+
+  // Auxiliares para os botões de avançar e voltar
+  late int auxiliarPlayer = widget.indiceDoComponente;
+  String _auxiliarImagem = '';
+  String _auxiliarTitulo = '';
+
 
   void pressionarPlay(){
     if (iconePlayInativo == Icons.play_arrow) {
