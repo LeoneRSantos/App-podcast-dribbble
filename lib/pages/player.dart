@@ -84,6 +84,48 @@ class _PlayerState extends State<Player> {
     debugPrint('Incremento: $auxiliarPlayer\n\n');
   }
 
+  void decrementarAuxiliarPlayer(){ 
+    if(auxiliarPlayer > 0){ 
+      auxiliarPlayer--;
+    }
+
+    else if(auxiliarPlayer == 0){ 
+      auxiliarPlayer = 5;
+    }
+
+    else{ 
+      auxiliarPlayer = widget.indiceDoComponente;
+    }
+
+    debugPrint('Decremento: $auxiliarPlayer\n\n');
+  }
+
+
+  void voltarPodcast(){ 
+    if(widget.indiceDoComponente >= 0){ 
+      setState(() {
+        widget.imagemPlayer = widget.listaDeImagens[auxiliarPlayer];
+        widget.tituloPlayer = widget.listaDeTitulos[auxiliarPlayer];
+
+        debugPrint('ìndice: ${widget.indiceDoComponente}\n Auxiliar: $auxiliarPlayer');
+
+        decrementarAuxiliarPlayer();
+      });
+    }
+
+    else if(widget.indiceDoComponente < 0){ 
+       setState(() {
+
+        widget.tituloPlayer = widget.listaDeTitulos[auxiliarPlayer];
+
+        debugPrint('ìndice: ${widget.indiceDoComponente}\n Auxiliar: $auxiliarPlayer');
+        
+        decrementarAuxiliarPlayer();
+        
+      });
+    }
+  }
+
   void avancarPodcast(){ 
     if (widget.indiceDoComponente <= 5) {
       setState(() {
