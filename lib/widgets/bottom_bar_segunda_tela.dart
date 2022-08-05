@@ -47,7 +47,7 @@ class _BottomBarSegundaTelaState extends State<BottomBarSegundaTela> {
             child: IconButton(
               color: Theme.of(context).colorScheme.background,
               onPressed: widget.play, 
-              icon: Icon(widget.iconePlay)),
+              icon: Icon(widget.iconePlay, size: 35.0,)),
           ),
 
           GestureDetector( 
@@ -69,7 +69,7 @@ class ComponenteIcone extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Icon(icone, size: 25.0, 
+    return Icon(icone, size: 35.0, 
         color: Theme.of(context).colorScheme.primary,);
   }
 }
