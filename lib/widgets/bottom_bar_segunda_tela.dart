@@ -6,7 +6,8 @@ class BottomBarSegundaTela extends StatefulWidget {
   required this.iconePlay, 
   required this.play, 
   required this.salvar, 
-  required this.avancarPlayer}) : super(key: key);
+  required this.avancarPlayer, 
+  required this.voltarPlayer}) : super(key: key);
 
   final IconData iconeSalvar;
   final IconData iconePlay;
