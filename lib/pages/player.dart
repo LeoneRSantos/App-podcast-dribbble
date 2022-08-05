@@ -29,13 +29,11 @@ class _PlayerState extends State<Player> {
   IconData iconePlayInativo = Icons.play_arrow;
 
   // indicadores de progresso do slider
-  double _value = 1.7;
+  double _value = 1.30;
   double _valorRestante = 5.0;
 
   // Auxiliares para os botões de avançar e voltar
   late int auxiliarPlayer = widget.indiceDoComponente;
-  String _auxiliarImagem = '';
-  String _auxiliarTitulo = '';
 
 
   void pressionarPlay(){
