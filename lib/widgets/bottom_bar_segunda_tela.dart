@@ -35,7 +35,9 @@ class _BottomBarSegundaTelaState extends State<BottomBarSegundaTela> {
             onTap: widget.salvar,
             child: ComponenteIcone(icone: widget.iconeSalvar)),
 
-          ComponenteIcone(icone: Icons.skip_previous),
+          GestureDetector( 
+            onTap: widget.voltarPlayer,
+            child: ComponenteIcone(icone: Icons.skip_previous)),
 
           Container(
             decoration: BoxDecoration( 
