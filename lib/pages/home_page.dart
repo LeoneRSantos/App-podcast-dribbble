@@ -3,7 +3,6 @@ import 'package:podcast_app_dribbble/categoria_topo.dart';
 import 'package:podcast_app_dribbble/widgets/carrossel_de_podcasts.dart';
 import 'package:podcast_app_dribbble/widgets/categorias_topo.dart';
 import 'package:podcast_app_dribbble/widgets/reproduzidos_recentemente.dart';
-import 'package:podcast_app_dribbble/widgets/textos.dart';
 import 'package:podcast_app_dribbble/widgets/topo.dart';
 import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
 
@@ -103,29 +102,38 @@ class _MyHomePageState extends State<MyHomePage> {
           
             children: [ 
       
-              CategoriasTopo(
-              corTexto1: _corInicialTexto1, 
-              corTexto2: _corInicialTexto2,
-              corTexto3: _corInicialTexto3,
-              tamanhoTexto1: _tamanhoInicialTexto1, 
-              tamanhoTexto2: _tamanhoInicialTexto2,
-              tamanhoTexto3: _tamanhoInicialTexto3, 
-              selecionarCategoriaUm: (){ 
-                aux = categoria.verificarIndiceCategoria('Popular');
-                _categoriaSelecionada(aux);
-              },
-              selecionarCategoriaDois: () { 
-                aux = categoria.verificarIndiceCategoria('Destaque');
-                _categoriaSelecionada(aux);
-              }, 
-              selecionarCategoriaTres: () { 
-                aux = categoria.verificarIndiceCategoria('Tendências');
-                _categoriaSelecionada(aux);
-              },),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5.0),
+                child: CategoriasTopo(
+                corTexto1: _corInicialTexto1, 
+                corTexto2: _corInicialTexto2,
+                corTexto3: _corInicialTexto3,
+                tamanhoTexto1: _tamanhoInicialTexto1, 
+                tamanhoTexto2: _tamanhoInicialTexto2,
+                tamanhoTexto3: _tamanhoInicialTexto3, 
+                selecionarCategoriaUm: (){ 
+                  aux = categoria.verificarIndiceCategoria('Popular');
+                  _categoriaSelecionada(aux);
+                },
+                selecionarCategoriaDois: () { 
+                  aux = categoria.verificarIndiceCategoria('Destaque');
+                  _categoriaSelecionada(aux);
+                }, 
+                selecionarCategoriaTres: () { 
+                  aux = categoria.verificarIndiceCategoria('Tendências');
+                  _categoriaSelecionada(aux);
+                },),
+              ),
       
-              CarroselDePodcasts(), 
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5.0),
+                child: CarroselDePodcasts(),
+              ), 
       
-              ReproduzidosRecentemente(),        
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical:5.0),
+                child: ReproduzidosRecentemente(),
+              ),        
             
             ],
           ),
