@@ -6,27 +6,27 @@ class ReproduzidosRecentemente extends StatelessWidget {
   ReproduzidosRecentemente({Key? key}) : super(key: key);
   
   // Logo dos Podcasts
-  String aDerivaImagem = 'assets/images/a-deriva.jpg';
-  String flowImagem = 'assets/images/flow.jpg';
-  String podPahImagem = 'assets/images/podpah.jpg';
+  String _aDerivaImagem = 'assets/images/a-deriva.jpg';
+  String _flowImagem = 'assets/images/flow.jpg';
+  String _podPahImagem = 'assets/images/podpah.jpg';
 
   // Nomes dos podcasts
-  String aDerivaNome = 'À Deriva podcast';
-  String flowNome = 'Flow podcast';
-  String podPahNome = 'Pod Pah podcast';
+  String _aDerivaNome = 'À Deriva podcast';
+  String _flowNome = 'Flow podcast';
+  String _podPahNome = 'Pod Pah podcast';
   
   // Lista de imagens
-  late List<String> imagensPodcasts = [ 
-    aDerivaImagem, flowImagem, podPahImagem, aDerivaImagem, flowImagem, podPahImagem,
+  late List<String> _imagensPodcasts = [ 
+    _aDerivaImagem, _flowImagem, _podPahImagem, _aDerivaImagem, _flowImagem, _podPahImagem,
   ];
 
   // Lista de Nomes (subtítulos)
-  late List<String> nomesPodcasts = [ 
-    aDerivaNome, flowNome, podPahNome, aDerivaNome, flowNome, podPahNome,
+  late List<String> _nomesPodcasts = [ 
+    _aDerivaNome, _flowNome, _podPahNome, _aDerivaNome, _flowNome, _podPahNome,
   ];
 
   // Lista de títulos
-  List<String> titulosPodcasts = [ 
+  List<String> _titulosPodcasts = [ 
     'Caio Fábio (191) | À Deriva Podcast com Arthur Petry', 
     'FALCÃO 12 - Flow #74 🤝 @Flow Sport Club', 
     'MANO BROWN - Podpah #351',
@@ -52,15 +52,15 @@ class ReproduzidosRecentemente extends StatelessWidget {
         ListView.builder(
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
-          itemCount: imagensPodcasts.length,
+          itemCount: _imagensPodcasts.length,
           itemBuilder: (BuildContext context, int index) {
             
             return ComponentePlayer(
-              imagem: imagensPodcasts[index], 
-              titulo: titulosPodcasts[index], 
-              nome: nomesPodcasts[index], 
-              logoDosPodcasts: imagensPodcasts, 
-              tituloDosPodcasts: titulosPodcasts, 
+              imagem: _imagensPodcasts[index], 
+              titulo: _titulosPodcasts[index], 
+              nome: _nomesPodcasts[index], 
+              logoDosPodcasts: _imagensPodcasts, 
+              tituloDosPodcasts: _titulosPodcasts, 
               indice: index,);
 
           }),
