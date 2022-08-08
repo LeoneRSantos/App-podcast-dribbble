@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:podcast_app_dribbble/categoria_topo.dart';
 import 'package:podcast_app_dribbble/widgets/textos.dart';
 
 class CategoriasTopo extends StatefulWidget {
@@ -28,16 +27,6 @@ class CategoriasTopo extends StatefulWidget {
   final double tamanhoTexto1;
   final double tamanhoTexto2;
   final double tamanhoTexto3;
-
-  int _indiceCategoria = 0;
-
-  int retornarIndice(int indiceAtual){
-    
-    _indiceCategoria = indiceAtual;
-
-    debugPrint('Indice da categoria: $_indiceCategoria');
-    return _indiceCategoria;
-  }
 
   @override
   State<CategoriasTopo> createState() => _CategoriasTopoState();
