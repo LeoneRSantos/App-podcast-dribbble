@@ -29,10 +29,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Color _corInicialTexto3 = CategoriaTopo.corInativa;
 
   // Índice usado na BottomNavigation
-  int selectedIndex = 0;
+  int _selectedIndex = 0;
 
   // Auxiliar para selecionar a categoria do topo
-  int aux = 0;
+  int _aux = 0;
 
   void _categoriaSelecionada(int indice){
     if (indice == 0) {
@@ -82,14 +82,14 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
-  ColorScheme cores = Theme.of(context).colorScheme;
+  ColorScheme _cores = Theme.of(context).colorScheme;
 
   return SafeArea(
     child: Scaffold(
-      backgroundColor: cores.background,
+      backgroundColor: _cores.background,
 
       appBar: AppBar( 
-        title: Topo(),
+        title: const Topo(),
         backgroundColor: Theme.of(context).colorScheme.background,
         elevation: 0.0,
       ),
@@ -112,16 +112,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 tamanhoTexto2: _tamanhoInicialTexto2,
                 tamanhoTexto3: _tamanhoInicialTexto3, 
                 selecionarCategoriaUm: (){ 
-                  aux = categoria.verificarIndiceCategoria('Popular');
-                  _categoriaSelecionada(aux);
+                  _aux = categoria.verificarIndiceCategoria('Popular');
+                  _categoriaSelecionada(_aux);
                 },
                 selecionarCategoriaDois: () { 
-                  aux = categoria.verificarIndiceCategoria('Destaque');
-                  _categoriaSelecionada(aux);
+                  _aux = categoria.verificarIndiceCategoria('Destaque');
+                  _categoriaSelecionada(_aux);
                 }, 
                 selecionarCategoriaTres: () { 
-                  aux = categoria.verificarIndiceCategoria('Tendências');
-                  _categoriaSelecionada(aux);
+                  _aux = categoria.verificarIndiceCategoria('Tendências');
+                  _categoriaSelecionada(_aux);
                 },),
               ),
       
@@ -141,16 +141,16 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       bottomNavigationBar: SlidingClippedNavBar(
-        backgroundColor: cores.background,
+        backgroundColor: _cores.background,
         onButtonPressed: (index) {
           setState(() {
-            selectedIndex = index;
+            _selectedIndex = index;
           });
         },
         iconSize: 30,
-        activeColor: cores.primary,
-        inactiveColor: cores.secondary,
-        selectedIndex: selectedIndex,
+        activeColor: _cores.primary,
+        inactiveColor: _cores.secondary,
+        selectedIndex: _selectedIndex,
         barItems: [
           BarItem(
             icon: Icons.home,
