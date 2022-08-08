@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:podcast_app_dribbble/widgets/textos.dart';
 
 class Explorar extends StatefulWidget {
   Explorar({Key? key}) : super(key: key);
@@ -35,15 +38,23 @@ class _ExplorarState extends State<Explorar> {
               context: context,
               builder: (BuildContext context) {
                 return AlertDialog(
-                  title: const Text('Thanks!'),
-                  content: Text(
-                      'You typed "$value", which has length ${value.characters.length}.'),
+                  title: Textos( 
+                    conteudo: 'Ocorreu um erro',  
+                    cor: Theme.of(context).colorScheme.primary, tamanho: 20.0),
+
+                  content:Textos( 
+                    conteudo: 'Por favor, tente novamente mais tarde.', 
+                    cor: Theme.of(context).colorScheme.primary, tamanho: 20.0),
+                    
                   actions: <Widget>[
                     TextButton(
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      child: const Text('OK'),
+                      child: Textos(
+                        conteudo: 'OK', 
+                        cor: Theme.of(context).colorScheme.primary, 
+                        tamanho: 20.0),
                     ),
                   ],
                 );
