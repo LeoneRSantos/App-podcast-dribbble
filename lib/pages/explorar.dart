@@ -30,8 +30,23 @@ class _ExplorarState extends State<Explorar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: TextField(
+      backgroundColor: Theme.of(context).colorScheme.background,
+      appBar: AppBar( 
+        title: Textos(
+          conteudo: 'Explore novos podcasts', 
+          cor: Theme.of(context).colorScheme.primary, 
+          tamanho: 26.0),
+        backgroundColor: Theme.of(context).colorScheme.background,
+        elevation: 0.0,
+      ),
+
+
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: TextField(
           controller: _controller,
           onSubmitted: (String value) async {
             await showDialog<void>(
