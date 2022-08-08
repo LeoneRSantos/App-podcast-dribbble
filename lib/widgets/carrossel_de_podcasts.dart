@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class CarroselDePodcasts extends StatelessWidget {
   CarroselDePodcasts({Key? key}) : super(key: key);
 
-  List<String> imagens = ['assets/images/a-deriva.jpg', 'assets/images/flow.jpg', 'assets/images/podpah.jpg'];
+  List<String> _imagens = ['assets/images/a-deriva.jpg', 'assets/images/flow.jpg', 'assets/images/podpah.jpg'];
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +12,11 @@ class CarroselDePodcasts extends StatelessWidget {
       child: CarouselSlider.builder( 
         
       itemBuilder: (BuildContext context, int index, int realIndex) { 
-        final podcasts = imagens[index];
+        final _podcasts = _imagens[index];
 
-        return construirImagem(podcasts, index);
+        return _construirImagem(_podcasts, index);
        }, 
-      itemCount: imagens.length, 
+      itemCount: _imagens.length, 
       options: CarouselOptions( 
         height: 300.0, 
         autoPlay: true, 
@@ -30,7 +30,7 @@ class CarroselDePodcasts extends StatelessWidget {
   }
 }
 
-Widget construirImagem(String imagem, int indice) => Container( 
+Widget _construirImagem(String imagem, int indice) => Container( 
   margin: EdgeInsets.symmetric(horizontal: 10.0),
   child: Image.asset(imagem),
 );
