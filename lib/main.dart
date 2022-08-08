@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
           tertiary: Color(0xFFDBB3AD)),
         
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
