@@ -23,13 +23,13 @@ class Topo extends StatelessWidget {
                 children: [
                   Textos(conteudo: 'Boa noite! ', cor: cores.primary, tamanho: 26.0), 
 
-                  Icon(Icons.waving_hand, color: Colors.amber,)
+                  const Icon(Icons.waving_hand, color: Colors.amber,)
                 ],
               ),
             ],
           ), 
 
-          Spacer(),
+          const Spacer(),
 
           Container( 
             decoration: BoxDecoration( 
