@@ -47,6 +47,14 @@ class _ExplorarState extends State<Explorar> {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: TextField(
+              decoration: InputDecoration(
+                fillColor: Theme.of(context).colorScheme.primary,
+                iconColor: Theme.of(context).colorScheme.primary,
+                icon: Icon(Icons.search_outlined, 
+                size: 30.0,),
+                border: OutlineInputBorder(),
+                labelText: 'Explorar',
+              ),
           controller: _controller,
           onSubmitted: (String value) async {
             await showDialog<void>(
