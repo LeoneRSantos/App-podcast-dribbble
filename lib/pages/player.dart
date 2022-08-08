@@ -25,127 +25,127 @@ class Player extends StatefulWidget {
 class _PlayerState extends State<Player> {
 
   // Ícones de salvar e de play
-  IconData iconeSalvarInativo = Icons.bookmark_border_rounded;
-  IconData iconePlayInativo = Icons.play_arrow;
+  IconData _iconeSalvarInativo = Icons.bookmark_border_rounded;
+  IconData _iconePlayInativo = Icons.play_arrow;
 
   // indicadores de progresso do slider
   double _value = 1.30;
   double _valorRestante = 5.0;
 
   // Auxiliares para os botões de avançar e voltar
-  late int auxiliarPlayer = widget.indiceDoComponente;
+  late int _auxiliarPlayer = widget.indiceDoComponente;
 
 
-  void pressionarPlay(){
-    if (iconePlayInativo == Icons.play_arrow) {
+  void _pressionarPlay(){
+    if (_iconePlayInativo == Icons.play_arrow) {
       setState(() {
-        iconePlayInativo = Icons.pause;
+        _iconePlayInativo = Icons.pause;
         
       });
     }
 
     else{
       setState(() {
-        iconePlayInativo = Icons.play_arrow;
+        _iconePlayInativo = Icons.play_arrow;
         
       });
     }
   }
 
-  void salvarPodcast(){ 
-    if (iconeSalvarInativo == Icons.bookmark_border_rounded) {
+  void _salvarPodcast(){ 
+    if (_iconeSalvarInativo == Icons.bookmark_border_rounded) {
       setState(() {
-        iconeSalvarInativo = Icons.bookmark;
+        _iconeSalvarInativo = Icons.bookmark;
       });
     }
 
     else{ 
       setState(() {
-        iconeSalvarInativo = Icons.bookmark_border_rounded;
+        _iconeSalvarInativo = Icons.bookmark_border_rounded;
         
       });
     }
   }
 
-  void incrementarAuxiliarPlayer(){ 
-    if (auxiliarPlayer < 5) {
-      auxiliarPlayer++;
+  void _incrementarAuxiliarPlayer(){ 
+    if (_auxiliarPlayer < 5) {
+      _auxiliarPlayer++;
     }
 
-    else if(auxiliarPlayer == 5){ 
-      auxiliarPlayer = 0;
-    }
-
-    else{ 
-      auxiliarPlayer = widget.indiceDoComponente;
-    }
-    debugPrint('Incremento: $auxiliarPlayer\n\n');
-  }
-
-  void decrementarAuxiliarPlayer(){ 
-    if(auxiliarPlayer > 0){ 
-      auxiliarPlayer--;
-    }
-
-    else if(auxiliarPlayer == 0){ 
-      auxiliarPlayer = 5;
+    else if(_auxiliarPlayer == 5){ 
+      _auxiliarPlayer = 0;
     }
 
     else{ 
-      auxiliarPlayer = widget.indiceDoComponente;
+      _auxiliarPlayer = widget.indiceDoComponente;
+    }
+    debugPrint('Incremento: $_auxiliarPlayer\n\n');
+  }
+
+  void _decrementarAuxiliarPlayer(){ 
+    if(_auxiliarPlayer > 0){ 
+      _auxiliarPlayer--;
     }
 
-    debugPrint('Decremento: $auxiliarPlayer\n\n');
+    else if(_auxiliarPlayer == 0){ 
+      _auxiliarPlayer = 5;
+    }
+
+    else{ 
+      _auxiliarPlayer = widget.indiceDoComponente;
+    }
+
+    debugPrint('Decremento: $_auxiliarPlayer\n\n');
   }
 
 
-  void voltarPodcast(){ 
+  void _voltarPodcast(){ 
     if(widget.indiceDoComponente >= 0){ 
       setState(() {
-        widget.imagemPlayer = widget.listaDeImagens[auxiliarPlayer];
-        widget.tituloPlayer = widget.listaDeTitulos[auxiliarPlayer];
+        widget.imagemPlayer = widget.listaDeImagens[_auxiliarPlayer];
+        widget.tituloPlayer = widget.listaDeTitulos[_auxiliarPlayer];
 
-        debugPrint('ìndice: ${widget.indiceDoComponente}\n Auxiliar: $auxiliarPlayer');
+        debugPrint('ìndice: ${widget.indiceDoComponente}\n Auxiliar: $_auxiliarPlayer');
 
-        decrementarAuxiliarPlayer();
+        _decrementarAuxiliarPlayer();
       });
     }
 
     else if(widget.indiceDoComponente < 0){ 
        setState(() {
 
-        widget.tituloPlayer = widget.listaDeTitulos[auxiliarPlayer];
+        widget.tituloPlayer = widget.listaDeTitulos[_auxiliarPlayer];
 
-        debugPrint('ìndice: ${widget.indiceDoComponente}\n Auxiliar: $auxiliarPlayer');
+        debugPrint('ìndice: ${widget.indiceDoComponente}\n Auxiliar: $_auxiliarPlayer');
         
-        decrementarAuxiliarPlayer();
+        _decrementarAuxiliarPlayer();
         
       });
     }
   }
 
-  void avancarPodcast(){ 
+  void _avancarPodcast(){ 
     if (widget.indiceDoComponente <= 5) {
       setState(() {
         
-        widget.imagemPlayer = widget.listaDeImagens[auxiliarPlayer];
+        widget.imagemPlayer = widget.listaDeImagens[_auxiliarPlayer];
 
-        widget.tituloPlayer = widget.listaDeTitulos[auxiliarPlayer];
+        widget.tituloPlayer = widget.listaDeTitulos[_auxiliarPlayer];
 
-        debugPrint('ìndice: ${widget.indiceDoComponente}\n Auxiliar: $auxiliarPlayer');
+        debugPrint('ìndice: ${widget.indiceDoComponente}\n Auxiliar: $_auxiliarPlayer');
         
-        incrementarAuxiliarPlayer();
+        _incrementarAuxiliarPlayer();
       });
     }
 
     else if(widget.indiceDoComponente > 5){ 
       setState(() {
 
-        widget.tituloPlayer = widget.listaDeTitulos[auxiliarPlayer];
+        widget.tituloPlayer = widget.listaDeTitulos[_auxiliarPlayer];
 
-        debugPrint('ìndice: ${widget.indiceDoComponente}\n Auxiliar: $auxiliarPlayer');
+        debugPrint('ìndice: ${widget.indiceDoComponente}\n Auxiliar: $_auxiliarPlayer');
         
-        incrementarAuxiliarPlayer();
+        _incrementarAuxiliarPlayer();
         
       });
 
@@ -189,7 +189,7 @@ class _PlayerState extends State<Player> {
                 ),
                 ),
 
-              Spacer(),
+              const Spacer(),
 
               Container( 
                 decoration: BoxDecoration( 
@@ -255,7 +255,7 @@ class _PlayerState extends State<Player> {
                 children: [ 
                   Text('${_value.toStringAsFixed(2)}'),
 
-                  Spacer(),
+                  const Spacer(),
 
                   Text('${(_valorRestante-_value).toStringAsFixed(2)}'),
                 ],
@@ -266,12 +266,12 @@ class _PlayerState extends State<Player> {
         
 
         bottomNavigationBar: BottomBarSegundaTela( 
-          iconeSalvar: iconeSalvarInativo,  
-          iconePlay: iconePlayInativo, 
-          play: pressionarPlay, 
-          salvar: salvarPodcast, 
-          avancarPlayer: avancarPodcast, 
-          voltarPlayer: voltarPodcast,),
+          iconeSalvar: _iconeSalvarInativo,  
+          iconePlay: _iconePlayInativo, 
+          play: _pressionarPlay, 
+          salvar: _salvarPodcast, 
+          avancarPlayer: _avancarPodcast, 
+          voltarPlayer: _voltarPodcast,),
        
       ), 
       );
