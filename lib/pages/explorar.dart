@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:podcast_app_dribbble/widgets/textos.dart';
 
@@ -55,36 +53,38 @@ class _ExplorarState extends State<Explorar> {
                 border: OutlineInputBorder(),
                 labelText: 'Explorar',
               ),
-          controller: _controller,
-          onSubmitted: (String value) async {
-            await showDialog<void>(
-              context: context,
-              builder: (BuildContext context) {
-                return AlertDialog(
-                  title: Textos( 
-                    conteudo: 'Ocorreu um erro',  
-                    cor: Theme.of(context).colorScheme.primary, tamanho: 20.0),
+              controller: _controller,
+              onSubmitted: (String value) async {
+                await showDialog<void>(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: Textos( 
+                        conteudo: 'Ocorreu um erro',  
+                        cor: Theme.of(context).colorScheme.primary, tamanho: 20.0),
 
-                  content:Textos( 
-                    conteudo: 'Por favor, tente novamente mais tarde.', 
-                    cor: Theme.of(context).colorScheme.primary, tamanho: 20.0),
-                    
-                  actions: <Widget>[
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      child: Textos(
-                        conteudo: 'OK', 
-                        cor: Theme.of(context).colorScheme.primary, 
-                        tamanho: 20.0),
-                    ),
-                  ],
+                      content:Textos( 
+                        conteudo: 'Por favor, tente novamente mais tarde.', 
+                        cor: Theme.of(context).colorScheme.primary, tamanho: 20.0),
+
+                      actions: <Widget>[
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Textos(
+                            conteudo: 'OK', 
+                            cor: Theme.of(context).colorScheme.primary, 
+                            tamanho: 20.0),
+                        ),
+                      ],
+                    );
+                  },
                 );
               },
-            );
-          },
-        ),
+            ),
+          ),
+        ],
       ),
     );
   }
