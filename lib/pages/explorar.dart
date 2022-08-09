@@ -30,8 +30,10 @@ class _ExplorarState extends State<Explorar> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar( 
-        title: Textos(
-          conteudo: 'Encontre novos podcasts', 
+        title: Row(
+          children: [
+            Textos(
+              conteudo: 'Encontre novos podcasts', 
           cor: Theme.of(context).colorScheme.primary, 
           tamanho: 26.0),
         backgroundColor: Theme.of(context).colorScheme.background,
