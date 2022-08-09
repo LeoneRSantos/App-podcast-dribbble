@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/home_page.dart';
+import 'package:podcast_app_dribbble/pages/pagina_inicial.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
           tertiary: Color(0xFFDBB3AD)),
         
       ),
-      home: const MyHomePage(),
+      home: PaginaInicial(),
     );
   }
 }
