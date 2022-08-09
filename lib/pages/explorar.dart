@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:podcast_app_dribbble/widgets/estrutura_app_bar.dart';
 import 'package:podcast_app_dribbble/widgets/textos.dart';
 
 class Explorar extends StatefulWidget {
@@ -30,22 +31,11 @@ class _ExplorarState extends State<Explorar> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar( 
-        title: Row(
-          children: [
-            Textos(
-              conteudo: 'Encontre novos podcasts', 
-              cor: Theme.of(context).colorScheme.primary, 
-              tamanho: 26.0),
-
-            Icon(Icons.search_rounded, 
-            color: Theme.of(context).colorScheme.onSurface, 
-            size: 26.0,),
-          ],
-        ),
+        title: const EstruturaAppBar(texto: 'Encontre novos podcasts',  
+        icone: Icons.search_rounded),
         backgroundColor: Theme.of(context).colorScheme.background,
         elevation: 0.0,
       ),
-
 
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
