@@ -51,14 +51,12 @@ class _ExplorarState extends State<Explorar> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(15.0),
             child: TextField(
               autofocus: true,
               decoration: InputDecoration(
                 fillColor: Theme.of(context).colorScheme.primary,
                 iconColor: Theme.of(context).colorScheme.primary,
-                icon: const Icon(Icons.search_outlined, 
-                size: 30.0,),
                 border: const OutlineInputBorder(),
                 labelText: 'Explorar',
               ),
