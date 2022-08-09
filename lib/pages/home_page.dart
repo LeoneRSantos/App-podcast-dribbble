@@ -4,7 +4,6 @@ import 'package:podcast_app_dribbble/widgets/carrossel_de_podcasts.dart';
 import 'package:podcast_app_dribbble/widgets/categorias_topo.dart';
 import 'package:podcast_app_dribbble/widgets/reproduzidos_recentemente.dart';
 import 'package:podcast_app_dribbble/widgets/topo.dart';
-import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -27,9 +26,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Color _corInicialTexto1 = CategoriaTopo.corAtiva;
   Color _corInicialTexto2 = CategoriaTopo.corInativa;
   Color _corInicialTexto3 = CategoriaTopo.corInativa;
-
-  // Índice usado na BottomNavigation
-  int _selectedIndex = 0;
 
   // Auxiliar para selecionar a categoria do topo
   int _aux = 0;
@@ -140,37 +136,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
 
-      bottomNavigationBar: SlidingClippedNavBar(
-        backgroundColor: _cores.background,
-        onButtonPressed: (index) {
-          setState(() {
-            _selectedIndex = index;
-          });
-        },
-        iconSize: 30,
-        activeColor: _cores.primary,
-        inactiveColor: _cores.secondary,
-        selectedIndex: _selectedIndex,
-        barItems: [
-          BarItem(
-            icon: Icons.home,
-            title: 'Home',
-          ),
-          BarItem(
-            icon: Icons.search_rounded,
-            title: 'Explorar',
-          ),
-          BarItem(
-            icon: Icons.bookmark_border_outlined,
-            title: 'Salvos',
-          ),
-          BarItem(
-            icon: Icons.settings_outlined,
-            title: 'Configurações',
-          ),
-           /// Add more BarItem if you want
-        ],
-      ),
     ),
   );
   }
