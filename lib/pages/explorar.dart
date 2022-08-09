@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:podcast_app_dribbble/widgets/textos.dart';
 
 class Explorar extends StatefulWidget {
-  Explorar({Key? key}) : super(key: key);
+  const Explorar({Key? key}) : super(key: key);
 
   @override
   State<Explorar> createState() => _ExplorarState();
@@ -48,9 +48,9 @@ class _ExplorarState extends State<Explorar> {
               decoration: InputDecoration(
                 fillColor: Theme.of(context).colorScheme.primary,
                 iconColor: Theme.of(context).colorScheme.primary,
-                icon: Icon(Icons.search_outlined, 
+                icon: const Icon(Icons.search_outlined, 
                 size: 30.0,),
-                border: OutlineInputBorder(),
+                border: const OutlineInputBorder(),
                 labelText: 'Explorar',
               ),
               controller: _controller,
