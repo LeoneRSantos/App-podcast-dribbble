@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:podcast_app_dribbble/pages/configuracoes.dart';
 import 'package:podcast_app_dribbble/pages/explorar.dart';
 import 'package:podcast_app_dribbble/pages/home_page.dart';
 import 'package:podcast_app_dribbble/pages/salvos.dart';
@@ -29,10 +30,11 @@ class _PaginaInicialState extends State<PaginaInicial> {
     return Scaffold( 
       body: PageView( 
         controller: _controladorDePaginas,
-        children: const [ 
-          MyHomePage(), 
-          Explorar(), 
-          Salvos(),
+        children: [ 
+          const MyHomePage(), 
+          const Explorar(), 
+          const Salvos(), 
+          Configuracoes(),
         ],
       ),
 
