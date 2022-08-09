@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/textos.dart';
+import 'package:podcast_app_dribbble/widgets/estrutura_app_bar.dart';
 
 class Salvos extends StatelessWidget {
   const Salvos({Key? key}) : super(key: key);
