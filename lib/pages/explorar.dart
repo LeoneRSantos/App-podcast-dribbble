@@ -31,7 +31,7 @@ class _ExplorarState extends State<Explorar> {
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar( 
         title: Textos(
-          conteudo: 'Explore novos podcasts', 
+          conteudo: 'Encontre novos podcasts', 
           cor: Theme.of(context).colorScheme.primary, 
           tamanho: 26.0),
         backgroundColor: Theme.of(context).colorScheme.background,
