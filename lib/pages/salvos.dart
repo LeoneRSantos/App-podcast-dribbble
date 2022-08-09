@@ -11,18 +11,8 @@ class Salvos extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.background,
         
         appBar: AppBar( 
-        title: Row(
-          children: [
-            Textos(
-              conteudo: 'Podcasts que você salvou', 
-              cor: Theme.of(context).colorScheme.primary, 
-              tamanho: 26.0), 
-
-            Icon(Icons.bookmark, 
-            color: Theme.of(context).colorScheme.onSurface, 
-            size: 26.0,),
-          ],
-        ),
+        title: const EstruturaAppBar(texto: 'Podcasts que você salvou',  
+        icone: Icons.bookmark),
         backgroundColor: Theme.of(context).colorScheme.background,
         elevation: 0.0,
       ),
