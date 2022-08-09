@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:podcast_app_dribbble/pages/explorar.dart';
 import 'package:podcast_app_dribbble/pages/home_page.dart';
+import 'package:podcast_app_dribbble/pages/salvos.dart';
 import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
 
 class PaginaInicial extends StatefulWidget {
@@ -30,7 +31,8 @@ class _PaginaInicialState extends State<PaginaInicial> {
         controller: _controladorDePaginas,
         children: const [ 
           MyHomePage(), 
-          Explorar(),
+          Explorar(), 
+          Salvos(),
         ],
       ),
 
@@ -39,7 +41,7 @@ class _PaginaInicialState extends State<PaginaInicial> {
         onButtonPressed: (index) {
           setState(() {
             _controladorDePaginas.animateToPage(index,  
-            duration: Duration(milliseconds: 400),  
+            duration: const Duration(milliseconds: 400),  
             curve: Curves.ease);
             _paginaAtual = index;
           });
