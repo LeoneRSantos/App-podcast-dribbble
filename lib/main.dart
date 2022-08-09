@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
           background: Color(0XFFfbfdff), 
           onBackground: Color(0xFFF1A060), 
           surface: Color(0xFFB5B6B6), 
-          onSurface: Color(0xFF6E46D6), 
+          onSurface: Colors.amber, 
           error: Colors.red, 
           onError: Colors.red, 
           tertiary: Color(0xFFDBB3AD)),
