@@ -34,8 +34,14 @@ class _ExplorarState extends State<Explorar> {
           children: [
             Textos(
               conteudo: 'Encontre novos podcasts', 
-          cor: Theme.of(context).colorScheme.primary, 
-          tamanho: 26.0),
+              cor: Theme.of(context).colorScheme.primary, 
+              tamanho: 26.0),
+
+            Icon(Icons.search_rounded, 
+            color: Theme.of(context).colorScheme.onSurface, 
+            size: 26.0,),
+          ],
+        ),
         backgroundColor: Theme.of(context).colorScheme.background,
         elevation: 0.0,
       ),
