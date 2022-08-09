@@ -28,7 +28,7 @@ class _PaginaInicialState extends State<PaginaInicial> {
     return Scaffold( 
       body: PageView( 
         controller: _controladorDePaginas,
-        children: [ 
+        children: const [ 
           MyHomePage(), 
           Explorar(),
         ],
