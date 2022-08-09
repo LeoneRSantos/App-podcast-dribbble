@@ -45,6 +45,7 @@ class _ExplorarState extends State<Explorar> {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: TextField(
+              autofocus: true,
               decoration: InputDecoration(
                 fillColor: Theme.of(context).colorScheme.primary,
                 iconColor: Theme.of(context).colorScheme.primary,
