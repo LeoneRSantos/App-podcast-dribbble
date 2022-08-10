@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CategoriaTopo{
   
   static const Color corInativa = Color(0xFFB5B6B6);
-  static const Color corAtiva = Color(0xFF050507);
+  static const Color corAtiva = Colors.amber;
 
   double tamanhoTextoAtivo = 26.0;
   double tamanhoTextoInativo = 20.0;
