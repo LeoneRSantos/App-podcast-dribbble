@@ -55,22 +55,19 @@ class _ConfiguracoesState extends State<Configuracoes> {
                         conteudo: 'Tema\t',  
                         cor: Theme.of(context).colorScheme.primary, tamanho: 20.0),
 
-                        Textos( 
-                        conteudo: 'tema claro',  
-                        cor: Theme.of(context).colorScheme.secondary, tamanho: 20.0), 
+                      Textos( 
+                      conteudo: widget.tipoTema,  
+                      cor: Theme.of(context).colorScheme.secondary, tamanho: 20.0), 
 
-                        const Spacer(), 
+                      const Spacer(),  
 
-                        Switch( 
-                          activeColor: Theme.of(context).colorScheme.secondary,
-                          inactiveThumbColor: Theme.of(context).colorScheme.background,
-                          value: _valor,  
-                          onChanged: (bool valorAtual){ 
-                            setState(() {
-                              _valor = valorAtual;
-                              
-                            });
-                          })
+                      TextButton( 
+                        onPressed: widget.mudancaDeTema,  
+                        child: Text('Alterar', 
+                        style: TextStyle( 
+                          color: Theme.of(context).colorScheme.primary, 
+                          fontSize: 20.0,
+                        ),),)
                     ],
                   ),
                 ),
