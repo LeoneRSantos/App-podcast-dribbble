@@ -16,9 +16,6 @@ class Configuracoes extends StatefulWidget {
 
 class _ConfiguracoesState extends State<Configuracoes> {
 
-  // Valor utilizado no switch
-  bool _valor = false;
-
   @override
   Widget build(BuildContext context) {
     return SafeArea( 
