@@ -41,6 +41,7 @@ class _PaginaInicialState extends State<PaginaInicial> {
     return Scaffold( 
       body: PageView( 
         controller: _controladorDePaginas,
+        onPageChanged: _passarPagina,
         children: [ 
           const MyHomePage(), 
           const Explorar(), 
