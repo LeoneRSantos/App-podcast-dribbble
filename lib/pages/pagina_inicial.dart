@@ -39,7 +39,7 @@ class _PaginaInicialState extends State<PaginaInicial> {
           const MyHomePage(), 
           const Explorar(), 
           const Salvos(), 
-          Configuracoes(),
+          Configuracoes(mudancaDeTema: widget.mudarTema, tipoTema: widget.tipoTema,),
         ],
       ),
 
