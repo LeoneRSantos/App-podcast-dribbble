@@ -76,9 +76,10 @@ class _MyAppState extends State<MyApp> {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: _temaEscuro,
-      home: PaginaInicial(),
+      title: 'Podcast app',
+      theme: _tema,
+      home: PaginaInicial(mudarTema: _alterarTema,  
+      tipoTema: _tipo,),
     );
   }
 }
