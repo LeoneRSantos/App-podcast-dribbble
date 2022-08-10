@@ -10,6 +10,9 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
 
+  // Tema do app
+  late ThemeData _tema = _temaClaro;
+
   // Tema claro
   final ThemeData _temaClaro = ThemeData(
     fontFamily: 'OC Pajaro Medium',
