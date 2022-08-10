@@ -51,6 +51,26 @@ class _MyAppState extends State<MyApp> {
       
     );
 
+    // Tipo de tema (claro ou escuro)
+    String _tipo = 'claro';
+
+    // Função que muda o tema do app
+    void _alterarTema(){ 
+      if (_tema.colorScheme.brightness == Brightness.light) {
+        setState(() {
+          _tema = _temaEscuro;
+          _tipo = 'escuro';
+        });
+      }
+
+      else if(_tema.colorScheme.brightness == Brightness.dark){
+        setState(() {
+          _tema = _temaClaro;
+          _tipo = 'claro';
+        });
+      }
+    }
+
   @override
   Widget build(BuildContext context) {
 
