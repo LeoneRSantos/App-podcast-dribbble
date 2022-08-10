@@ -27,6 +27,12 @@ class _PaginaInicialState extends State<PaginaInicial> {
     _controladorDePaginas = PageController(initialPage: _paginaAtual);
   }
 
+  void _passarPagina(int novaPagina){ 
+    setState(() {
+      _paginaAtual = novaPagina;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
 
