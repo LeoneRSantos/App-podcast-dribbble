@@ -6,7 +6,12 @@ import 'package:podcast_app_dribbble/pages/salvos.dart';
 import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
 
 class PaginaInicial extends StatefulWidget {
-  PaginaInicial({Key? key}) : super(key: key);
+  PaginaInicial({Key? key,  
+  required this.mudarTema,  
+  required this.tipoTema}) : super(key: key);
+
+  final void Function() mudarTema;
+  final String tipoTema;
 
   @override
   State<PaginaInicial> createState() => _PaginaInicialState();
