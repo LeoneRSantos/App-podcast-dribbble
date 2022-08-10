@@ -3,7 +3,12 @@ import 'package:podcast_app_dribbble/widgets/estrutura_app_bar.dart';
 import 'package:podcast_app_dribbble/widgets/textos.dart';
 
 class Configuracoes extends StatefulWidget {
-  Configuracoes({Key? key}) : super(key: key);
+  Configuracoes({Key? key,  
+  required this.mudancaDeTema,  
+  required this.tipoTema}) : super(key: key);
+
+  final void Function() mudancaDeTema;
+  final String tipoTema;
 
   @override
   State<Configuracoes> createState() => _ConfiguracoesState();
